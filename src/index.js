@@ -1,23 +1,14 @@
 const express  = require("express")
 const { RtcTokenBuilder, RtcRole } = require('agora-access-token');
-const cors = require('cors');
 
-const PORT =  3000;
+const PORT = process.env.PORT || 3000
 const app = express();
-app.use(cors()); // Enable CORS for all routes
 
 app.get("/", function(req, res){
   const response = { statuscode: res.statusCode, message: "API Works!!!"};
   res.json({response, response});
 });
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`connected at port ${PORT}`);
-
-
-  ///
-const app = express();
-const port = 3000;
 
 const APP_ID = '2b0bdd0de9f14d84bcff8fb037e452c3';
 const APP_CERTIFICATE = '18aaec564fbb4443a8d1f5d8345f205a';
@@ -40,10 +31,7 @@ app.get('/rtcToken', (req, res) => {
     return res.json({ token, channelName });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
 
-
-
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`connected at port ${PORT}`);
 });
