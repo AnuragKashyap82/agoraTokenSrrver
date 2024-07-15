@@ -6,7 +6,7 @@ const app = express();
 
 app.get("/", function(req, res){
   const response = { statuscode: res.statusCode, message: "API Works!!!"};
-  res.json(response);
+  res.json({response, response});
 });
 
 app.listen(PORT, "0.0.0.0", () => {
