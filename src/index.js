@@ -1,8 +1,10 @@
 const express  = require("express")
 const { RtcTokenBuilder, RtcRole } = require('agora-access-token');
+const cors = require('cors');
 
-const PORT = 3000;
+const PORT =  3000;
 const app = express();
+app.use(cors()); // Enable CORS for all routes
 
 app.get("/", function(req, res){
   const response = { statuscode: res.statusCode, message: "API Works!!!"};
