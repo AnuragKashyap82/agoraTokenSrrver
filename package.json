@@ -1,0 +1,19 @@
+{
+  "name": "agoratokenserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "agora-access-token": "^2.0.4",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
