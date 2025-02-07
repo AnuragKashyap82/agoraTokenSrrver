@@ -10,8 +10,8 @@ app.get("/", function(req, res){
 });
 
 
-const APP_ID = '23922b79cd2f479bbef32999ee319d04';
-const APP_CERTIFICATE = '6052304799384fa086ea5e9231c2c640';
+const APP_ID = 'fd53495871fd4e0fb63fc51b332438d1';
+const APP_CERTIFICATE = '90823ee29758404ba5686a9b2bf642d3';
 
 app.get('/rtcToken', (req, res) => {
     const channelName = req.query.channelName;
